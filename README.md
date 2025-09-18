@@ -1,10 +1,10 @@
-# 📊 Quarterly Report Summariser
+# Quarterly Report Summariser
 
-A lightweight pipeline that reads quarterly PDF reports, extracts decision-useful points, and ranks them by **Value** only (no business model / alignment system).
+A lightweight pipeline that reads quarterly PDF reports, extracts decision-useful points, and ranks them by **Value** only
 
 ---
 
-## 🚀 Features
+## Features
 - **PDF ingestion** → reads text directly from `.pdf` files in `./reports/`.
 - **Chunking** → splits large reports into realistic chunks (`max_chars` + overlap).
 - **Summarisation** → uses an LLM (via [Ollama](https://ollama.ai/)) to extract concise bullet points with metrics, guidance, and KPIs.
@@ -15,7 +15,7 @@ A lightweight pipeline that reads quarterly PDF reports, extracts decision-usefu
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 ```
 quaterly_report_summary/
 ├── app/
@@ -40,7 +40,7 @@ quaterly_report_summary/
 
 ---
 
-## ⚙️ Setup
+## Setup
 
 1. **Install dependencies**
    ```bash
@@ -63,7 +63,7 @@ quaterly_report_summary/
 
 ---
 
-## ▶️ Run
+## Run
 
 ```bash
 python run.py --verbose
@@ -76,7 +76,7 @@ This will:
 
 ---
 
-## 📝 Output Example
+## Output Example
 
 `points_output/MSFT_FY25_Q4_POINTS_20250918.txt`:
 ```
@@ -99,7 +99,7 @@ Rank  Value  Point
 
 ---
 
-## 🔧 Notes
+## Notes
 - Works best with reports that contain real text (not scanned images).
 - If reports are image-based, add OCR (e.g. `pytesseract`) before feeding into the pipeline.
 - No business model or alignment scoring is used anymore — **pure Value ranking**.
